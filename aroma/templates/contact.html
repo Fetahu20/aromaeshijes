@@ -1,0 +1,300 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+
+    <!-- Page Header with Video Background -->
+    <header class="page-header">
+        <video autoplay muted loop id="headerVideo" class="header-video">
+            <source src="https://media.istockphoto.com/id/1370288288/video/empty-tables-and-chairs-in-restaurant-stock-video.mp4?s=mp4-640x640-is&k=20&c=vyxtsnXtrk9OIt9A9JoXGdUSogkhQ5IrL1dfG6pOCzE=" type="video/mp4">
+            
+        </video>
+        <div class="container">
+            <h1>Na kontaktoni</h1>
+            <p>Jemi gjithmonë të gatshëm t'ju ndihmojmë me çdo pyetje, sugjerim ose kërkesë që mund të keni. Mos hezitoni të na kontaktoni.</p>
+        </div>
+    </header>
+   
+    <!-- Contact Info Section -->
+    <section class="contact-info-section">
+        <div class="container">
+            <h2 class="section-title">Informacione kontakti</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="contact-info-box">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 class="contact-box-title">Adresa jonë</h3>
+                        <div class="contact-details">
+                            <p>Komuna e Parisit<br>Tiranë</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-info-box">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3 class="contact-box-title">Na telefononi</h3>
+                        <div class="contact-details">
+                            <p>Tel: +355 69 422 5688<br>Tel: +355 42 123 456</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-info-box">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="contact-box-title">Na shkruani</h3>
+                        <div class="contact-details">
+                            <p> aromaeshijes@gmail.com<br>rezervime@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6 mx-auto">
+                    <div class="contact-info-box">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="contact-box-title">Orari i punës</h3>
+                        <div class="contact-details">
+                            <div class="row">
+                                <div class="col-6 text-end">
+                                    <p>Hënë - Enjte:</p>
+                                    <p>Premte - Shtunë:</p>
+                                    <p>Dielë:</p>
+                                </div>
+                                <div class="col-6 text-start">
+                                    <p>11:00 - 22:00</p>
+                                    <p>11:00 - 23:00</p>
+                                    <p>12:00 - 22:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Na dërgoni një mesazh</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" placeholder="Emri juaj *" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="email" placeholder="Email *" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" class="form-control" id="phone" placeholder="Numri i telefonit*">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="subject" placeholder="Subjekti *" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="message" rows="5" placeholder="Mesazhi juaj *" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-custom">Dërgo Mesazhin</button>
+                            </div>
+                        </form>
+                        <div id="contactSuccess" class="alert alert-success mt-4" style="display: none;">
+                            Mesazhi juaj u dërgua me sukses. Do t'ju kontaktojmë së shpejti.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Na gjeni në hartë</h2>
+            <div class="map-container">
+                <!-- Embed Google Maps (Replace with actual coordinates for Tirana, Albania) -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5993.362640606483!2d19.8004746448089!3d41.315795835235846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13503056051a2295%3A0xae080d6a1ef381e!2sKomuna%20e%20Parisit%2C%20Tiran%C3%AB%2C%20Albania!5e0!3m2!1sen!2s!4v1743967343424!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- Reservation Modal -->
+    <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reservationModalLabel">Bëj një rezervim</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="reservationForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Emri i plotë</label>
+                            <input type="text" class="form-control" id="reservationName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="reservationEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Numri i telefonit</label>
+                            <input type="tel" class="form-control" id="reservationPhone" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="date" class="form-label">Data</label>
+                                <input type="date" class="form-control" id="reservationDate" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="time" class="form-label">Ora</label>
+                                <input type="time" class="form-control" id="reservationTime" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="guests" class="form-label">Numri i personave</label>
+                            <select class="form-select" id="reservationGuests" required>
+                                <option value="">Zgjidh</option>
+                                <option value="1">1 person</option>
+                                <option value="2">2 persona</option>
+                                <option value="3">3 persona</option>
+                                <option value="4">4 persona</option>
+                                <option value="5">5 persona</option>
+                                <option value="6">6 persona</option>
+                                <option value="7+">7+ persona</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="specialRequests" class="form-label">Kërkesa të Veçanta (Opsionale)</label>
+                            <textarea class="form-control" id="specialRequests" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-custom w-100">Konfirmo rezervimin</button>
+                    </form>
+                    <div id="reservationSuccess" class="alert alert-success mt-3" style="display: none;">
+                        Rezervimi juaj u dërgua me sukses. Do t'ju kontaktojmë së shpejti për të konfirmuar detajet.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Validimi i formës së rezervimit
+        document.getElementById('reservationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validimi i fushave të formës
+            let name = document.getElementById('reservationName').value;
+            let email = document.getElementById('reservationEmail').value;
+            let phone = document.getElementById('reservationPhone').value;
+            let date = document.getElementById('reservationDate').value;
+            let time = document.getElementById('reservationTime').value;
+            let guests = document.getElementById('reservationGuests').value;
+            
+            // Validim i thjeshtë
+            if (name.trim() === '') {
+                alert('Ju lutemi shkruani emrin tuaj');
+                return false;
+            }
+            
+            if (email.trim() === '') {
+                alert('Ju lutemi shkruani email-in tuaj');
+                return false;
+            }
+            
+            if (phone.trim() === '') {
+                alert('Ju lutemi shkruani numrin e telefonit');
+                return false;
+            }
+            
+            if (date === '') {
+                alert('Ju lutemi zgjidhni një datë');
+                return false;
+            }
+            
+            if (time === '') {
+                alert('Ju lutemi zgjidhni një orë');
+                return false;
+            }
+            
+            if (guests === '') {
+                alert('Ju lutemi zgjidhni numrin e personave');
+                return false;
+            }
+            
+            // Nëse të gjitha kontrollet kalojnë, shfaq mesazhin e suksesit
+            document.getElementById('reservationSuccess').style.display = 'block';
+            
+            // Rivendos formën pas 3 sekondash dhe fshih mesazhin e suksesit
+            setTimeout(function() {
+                document.getElementById('reservationForm').reset();
+                document.getElementById('reservationSuccess').style.display = 'none';
+                
+                // Mbyll dialogun pas 3.5 sekondash
+                setTimeout(function() {
+                    const reservationModal = bootstrap.Modal.getInstance(document.getElementById('reservationModal'));
+                    reservationModal.hide();
+                }, 500);
+            }, 3000);
+        });
+
+        // Validimi i formës së kontaktit
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validimi i fushave të formës
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let subject = document.getElementById('subject').value;
+            let message = document.getElementById('message').value;
+            
+            // Validim i thjeshtë
+            if (name.trim() === '') {
+                alert('Ju lutemi shkruani emrin tuaj');
+                return false;
+            }
+            
+            if (email.trim() === '') {
+                alert('Ju lutemi shkruani email-in tuaj');
+                return false;
+            }
+            
+            if (subject.trim() === '') {
+                alert('Ju lutemi shkruani subjektin');
+                return false;
+            }
+            
+            if (message.trim() === '') {
+                alert('Ju lutemi shkruani mesazhin');
+                return false;
+            }
+            
+            // Nëse të gjitha kontrollet kalojnë, shfaq mesazhin e suksesit
+            document.getElementById('contactSuccess').style.display = 'block';
+            
+            // Rivendos formën pas 3 sekondash dhe fshih mesazhin e suksesit
+            setTimeout(function() {
+                document.getElementById('contactForm').reset();
+                document.getElementById('contactSuccess').style.display = 'none';
+            }, 3000);
+        });
+    </script>
+{% endblock %}

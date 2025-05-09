@@ -1,0 +1,298 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Hero Section me Video -->
+    <section class="hero">
+        <video autoplay muted loop>
+            <source src="https://media.istockphoto.com/id/1370288288/video/empty-tables-and-chairs-in-restaurant-stock-video.mp4?s=mp4-640x640-is&k=20&c=vyxtsnXtrk9OIt9A9JoXGdUSogkhQ5IrL1dfG6pOCzE=" type="video/mp4">
+           
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Mirësevini në Restorantin "Aroma e Shijes"</h1>
+            <p>Shijoni ushqimin e shijshëm tradicional me një prekje moderne</p>
+           
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Shërbimet Tona</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3>Kuzhina Shqiptare</h3>
+                        <p>Përjetoni gatimet tona të shijshme tradicionale të përgatitura nga kuzhinierët tanë të talentuar me përbërësit më të freskët.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-wine-glass-alt"></i>
+                        </div>
+                        <h3>Bar Premium</h3>
+                        <p>Shijoni përzgjedhjen tonë të gjerë të verërave të zgjedhura, koktejleve dhe pijeve premium.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Evente Private</h3>
+                        <p>Organizoni ngjarjet tuaja të veçanta në sallat tona elegante private me shërbim të personalizuar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-section">
+        <div class="container">
+            <h2 class="section-title">Menuja e ditës së sotme</h2>
+            <div class="row">
+                {% for product in products|slice:"3" %}
+
+                <div class="col-md-4">
+                    <div class="menu-item">
+                        <img src="{{product.product_image.url}}" alt="Tavë Kosi">
+                        <h3>{{product.product_name}}</h3>
+                        <p>{{product.product_description}}</p>
+                        <div class="menu-price"> {{product.product_price}} Lekë</div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#menuModal">Shiko Menunë e Plotë</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">Çfarë thonë klientët tanë?</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            "Përvoja në Aroma e Shijes është e paparë. Ushqimi është i jashtëzakonshëm dhe shërbimi është i përkryer. Një vend që duhet vizituar!"
+                        </div>
+                        <div class="author-info">
+                            <img src="https://static.bnr.bg/gallery/cr/a6eef9b534b512b9d97a9b26e1dc9629.jpg" alt="Andi Gjoni" class="author-avatar">
+                            <div>
+                                <p class="author-name">Andi Gjoni</p>
+                                <small>Kritik Kulinarie</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            "Festuam përvjetorin tonë në Aroma e Shijes dhe ishte perfekt. Ambienti, ushqimi dhe vëmendja ndaj detajeve e bënë natën tonë të veçantë."
+                        </div>
+                        <div class="author-info">
+                            <img src="https://media.istockphoto.com/id/2204119126/photo/portrait-of-beautiful-woman-at-caf%C3%A9.jpg?s=2048x2048&w=is&k=20&c=7crjlHE6RF1HkJy1ifhvhpgvFFYB5xFUwtRIP-0Whh4=" alt="Elona Duro" class="author-avatar">
+                            <div>
+                                <p class="author-name">Elona Duro</p>
+                                <small>Kliente e Rregullt</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            "Menuja e shefave është një udhëtim kulinar që ia vlen të provosh. Çdo pjatë tregon një histori dhe shijet janë të jashtëzakonshme."
+                        </div>
+                        <div class="author-info">
+                            <img src="https://abcnews.al/wp-content/uploads/2020/09/1-25.jpg" alt="Besart Leka" class="author-avatar">
+                            <div>
+                                <p class="author-name">Blerina Bombaj</p>
+                                <small>Bloger Ushqimi</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+<!-- Full Menu Modal -->
+<div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="menuModalLabel">Menuja e plotë</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Paragjellat -->
+                 {% for category in categories %}
+                <div class="menu-category mb-4">
+                    <h3 class="mb-3">{{category.category_name}}</h3>
+                    <div class="row">
+                        {% for product in category.products.all %}
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div>
+                                    <h5 class="mb-1">{{product.product_name}}</h5>
+                                    <p class="text-muted small">{{product.product_description}}</p>
+                                </div>
+                                <span class="menu-price">{{product.product_price}}</span>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+
+            
+
+           
+
+              
+
+              
+
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-custom" data-bs-dismiss="modal">Mbyll</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Reservation Modal -->
+    <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reservationModalLabel">Bëj një rezervim</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="reservationForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Emri i Plotë</label>
+                            <input type="text" class="form-control" id="reservationName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="reservationEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Numri i Telefonit</label>
+                            <input type="tel" class="form-control" id="reservationPhone" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="date" class="form-label">Data</label>
+                                <input type="date" class="form-control" id="reservationDate" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="time" class="form-label">Ora</label>
+                                <input type="time" class="form-control" id="reservationTime" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="guests" class="form-label">Numri i Personave</label>
+                            <select class="form-select" id="reservationGuests" required>
+                                <option value="">Zgjidh</option>
+                                <option value="1">1 person</option>
+                                <option value="2">2 persona</option>
+                                <option value="3">3 persona</option>
+                                <option value="4">4 persona</option>
+                                <option value="5">5 persona</option>
+                                <option value="6">6 persona</option>
+                                <option value="7+">7+ persona</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="specialRequests" class="form-label">Kërkesa të Veçanta (Opsionale)</label>
+                            <textarea class="form-control" id="specialRequests" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-custom w-100">Konfirmo Rezervimin</button>
+                    </form>
+                    <div id="reservationSuccess" class="alert alert-success mt-3" style="display: none;">
+                        Rezervimi juaj u dërgua me sukses. Do t'ju kontaktojmë së shpejti për të konfirmuar detajet.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Validimi i formës së rezervimit
+        document.getElementById('reservationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validimi i fushave të formës
+            let name = document.getElementById('reservationName').value;
+            let email = document.getElementById('reservationEmail').value;
+            let phone = document.getElementById('reservationPhone').value;
+            let date = document.getElementById('reservationDate').value;
+            let time = document.getElementById('reservationTime').value;
+            let guests = document.getElementById('reservationGuests').value;
+            
+            // Validim i thjeshtë
+            if (name.trim() === '') {
+                alert('Ju lutemi shkruani emrin tuaj');
+                return false;
+            }
+            
+            if (email.trim() === '') {
+                alert('Ju lutemi shkruani email-in tuaj');
+                return false;
+            }
+            
+            if (phone.trim() === '') {
+                alert('Ju lutemi shkruani numrin e telefonit');
+                return false;
+            }
+            
+            if (date === '') {
+                alert('Ju lutemi zgjidhni një datë');
+                return false;
+            }
+            
+            if (time === '') {
+                alert('Ju lutemi zgjidhni një orë');
+                return false;
+            }
+            
+            if (guests === '') {
+                alert('Ju lutemi zgjidhni numrin e personave');
+                return false;
+            }
+            
+            // Nëse të gjitha kontrollet kalojnë, shfaq mesazhin e suksesit
+            document.getElementById('reservationSuccess').style.display = 'block';
+            
+            // Rivendos formën pas 3 sekondash dhe fshih mesazhin e suksesit
+            setTimeout(function() {
+                document.getElementById('reservationForm').reset();
+                document.getElementById('reservationSuccess').style.display = 'none';
+                
+                // Mbyll dialogun pas 3.5 sekondash
+                setTimeout(function() {
+                    const reservationModal = bootstrap.Modal.getInstance(document.getElementById('reservationModal'));
+                    reservationModal.hide();
+                }, 500);
+            }, 3000);
+        });
+    </script>
+
+{% endblock %}
