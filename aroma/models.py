@@ -24,3 +24,12 @@ class Contact(models.Model):
     def __str__(self):
         return f"{self.contact_name}"
 
+class Reservation(models.Model):
+    reservation_name=models.CharField(max_length=100,null=True,blank=True)
+    reservation_email=models.EmailField(null=True,blank=True)
+    reservation_phone=models.CharField(max_length=100,null=True,blank=True)
+    reservation_date=models.CharField(max_length=100,null=True,blank=True)
+    reservation_time=models.TextField(max_length=1000,null=True,blank=True)
+    reservation_guests=models.TextField(max_length=100,null=True,blank=True)
+    def __str__(self):
+        return f"{self.reservation_name}"

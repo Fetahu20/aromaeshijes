@@ -237,46 +237,46 @@
     <script>
         // Validimi i formës së rezervimit
         document.getElementById('reservationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+             e.preventDefault();
             
-            // Validimi i fushave të formës
-            let name = document.getElementById('reservationName').value;
-            let email = document.getElementById('reservationEmail').value;
-            let phone = document.getElementById('reservationPhone').value;
-            let date = document.getElementById('reservationDate').value;
-            let time = document.getElementById('reservationTime').value;
-            let guests = document.getElementById('reservationGuests').value;
+            // // Validimi i fushave të formës
+            // let name = document.getElementById('reservationName').value;
+            // let email = document.getElementById('reservationEmail').value;
+            // let phone = document.getElementById('reservationPhone').value;
+            // let date = document.getElementById('reservationDate').value;
+            // let time = document.getElementById('reservationTime').value;
+            // let guests = document.getElementById('reservationGuests').value;
             
-            // Validim i thjeshtë
-            if (name.trim() === '') {
-                alert('Ju lutemi shkruani emrin tuaj');
-                return false;
-            }
+            // // Validim i thjeshtë
+            // if (name.trim() === '') {
+            //     alert('Ju lutemi shkruani emrin tuaj');
+            //     return false;
+            // }
             
-            if (email.trim() === '') {
-                alert('Ju lutemi shkruani email-in tuaj');
-                return false;
-            }
+            // if (email.trim() === '') {
+            //     alert('Ju lutemi shkruani email-in tuaj');
+            //     return false;
+            // }
             
-            if (phone.trim() === '') {
-                alert('Ju lutemi shkruani numrin e telefonit');
-                return false;
-            }
+            // if (phone.trim() === '') {
+            //     alert('Ju lutemi shkruani numrin e telefonit');
+            //     return false;
+            // }
             
-            if (date === '') {
-                alert('Ju lutemi zgjidhni një datë');
-                return false;
-            }
+            // if (date === '') {
+            //     alert('Ju lutemi zgjidhni një datë');
+            //     return false;
+            // }
             
-            if (time === '') {
-                alert('Ju lutemi zgjidhni një orë');
-                return false;
-            }
+            // if (time === '') {
+            //     alert('Ju lutemi zgjidhni një orë');
+            //     return false;
+            // }
             
-            if (guests === '') {
-                alert('Ju lutemi zgjidhni numrin e personave');
-                return false;
-            }
+            // if (guests === '') {
+            //     alert('Ju lutemi zgjidhni numrin e personave');
+            //     return false;
+            // }
             
             // Nëse të gjitha kontrollet kalojnë, shfaq mesazhin e suksesit
             document.getElementById('reservationSuccess').style.display = 'block';

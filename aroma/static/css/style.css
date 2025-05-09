@@ -342,7 +342,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background: rgba(0, 0, 0, 0.6);  /* Match the 0.6 opacity from main page */
+background: rgba(22, 21, 21, 0.6);  /* Match the 0.6 opacity from main page */
 z-index: 0;  /* Match z-index from main page */
 }
 
@@ -357,7 +357,7 @@ background-color: transparent;  /* Remove the background color */
 .page-header h1 {
 font-size: 3.5rem;  /* Match the font size from main page */
 margin-bottom: 20px;
-text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);  /* Match text shadow */
+text-shadow: 2px 2px 8px rgba(11, 11, 11, 0.5);  /* Match text shadow */
 }
 
 .about-img {
